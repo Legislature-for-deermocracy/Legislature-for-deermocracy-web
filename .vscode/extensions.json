@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "wallabyjs.console-ninja",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "devcharles5277.git-commit-plugin-with-gitmoji",
+    "github.copilot",
+    "github.copilot-chat",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "ecmel.vscode-html-css",
+    "oderwat.indent-rainbow",
+    "ms-vscode.vscode-typescript-next",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "albert.tabout",
+    "vue.volar",
+    "formulahendry.auto-rename-tag",
+    "amirha.better-comments-2",
+    "usernamehw.errorlens",
+    "vscode-icons-team.vscode-icons",
+    "sdras.vue-vscode-snippets"
+  ]
+}
