@@ -1,24 +1,34 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: '測試標題'
-  text: '測試內容'
-  tagline: My great project tagline
+  name: '冬鹿苑'
+  text: 'Legislature for deermocracy
+'
+  tagline: 06/21 青鳥行動
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 🧭我需要現場指南
+      link: /guide
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 詳細資訊
+      link: /demands
 
 features:
-  - title: Feature A
+  - icon: 📢
+    title: 最新消息
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+    link: /news
+  - icon: 📃
+    title: 行動訴求
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+    link: /demands
+  - icon: 🚦
+    title: 交通資訊
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /traffic
+  - icon: 📰
+    title: 闢謠專區
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /debunk
 ---
