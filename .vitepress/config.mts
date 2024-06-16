@@ -6,7 +6,7 @@ export default defineConfig({
   description: '測試說明',
   cleanUrls: true,
   srcDir: 'src',
-  base: '/Blue-Bird-Project/', // 根據 repo 名稱設定
+  base: '/Legislature-for-deermocracy-web/', // 根據 repo 名稱設定
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
