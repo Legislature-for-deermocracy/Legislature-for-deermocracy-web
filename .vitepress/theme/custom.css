@@ -1,0 +1,23 @@
+/* .vitepress/theme/custom.css */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    45deg,
+    #90a6da,
+    #b3e6dc,
+    #d0e7b6
+  );
+
+  --vp-custom-block-info-bg: #466494;
+  --vp-custom-block-tip-bg: #3d6aa1;
+  --vp-custom-block-warning-bg: #a17d3d;
+  --vp-custom-block-danger-bg: #a13d43;
+  --vp-custom-block-details-bg: #38383f;
+
+  .custom-block {
+    padding-top: 8px;
+  }
+  .details {
+    padding-top: 16px;
+  }
+}

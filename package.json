@@ -8,18 +8,18 @@
     "vue": "^3.4.27"
   },
   "devDependencies": {
-    "vitepress": "^1.2.3",
     "@types/node": "^18.19.34",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "prettier": "^3.3.1",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.2.0",
     "eslint-plugin-vue": "^9.26.0",
+    "prettier": "^3.3.1",
     "vite-plugin-eslint": "^1.8.1",
+    "vitepress": "^1.2.3",
     "vue-eslint-parser": "^9.4.3"
   }
 }
