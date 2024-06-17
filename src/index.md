@@ -1,10 +1,14 @@
 ---
+title: 冬鹿苑
+description: Legislature for deermocracy
+image: https://imgur.com/3NmYNzG
+featured: true
 layout: home
 
 hero:
   name: '冬鹿苑'
   text: 'Legislature for deermocracy'
-  tagline: 06/21 青鳥行動
+  tagline: 06/19 ~ 6/21 青鳥行動
   actions:
     - theme: brand
       text: 🚇行前準備
