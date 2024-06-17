@@ -3,10 +3,11 @@ import { defineConfig } from 'vitepress';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: '冬鹿苑',
-  // description: '冬鹿苑',
+  description: '冬鹿苑',
   cleanUrls: true,
   srcDir: 'src',
   base: '/', // 根據 repo 名稱設定
+  appearance: 'force-dark',
   themeConfig: {
     logo: '../src/assets/line.svg',
     siteTitle: '冬鹿苑',
