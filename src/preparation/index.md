@@ -1,4 +1,9 @@
-# 行前準備
+---
+prev: false
+next: false
+---
+
+# 行前準備 <BasicButton label="我已經在現場了🤚" to="/guide" />
 
 ::: details
 [[toc]]
@@ -29,8 +34,6 @@
 
 ## 交通資訊
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IWyd92rRukvThxYPw_49xZjrPAxm0hw&ehbc=2E312F&noprof=1" width="400" height="300" />
-
 ### ​捷運
 
 搭乘捷運至善導寺/台北車站/台大醫院站後步行約8/11/9分鐘即可抵達
@@ -50,6 +53,7 @@
 ### 火車/高鐵/機捷/步行
 
 搭乘火車/高鐵/機捷至台北車站後，約步行11分鐘後即可抵達
+<image src="../assets/preparationDirect.png" width="400px" />
 
 ## 友善店家
 
@@ -67,3 +71,13 @@
 
 - 更多店家
   > [🔗台派友善店家](https://maps.app.goo.gl/gV94rcHZtGFid9bM9)
+
+<script setup>
+  import BasicButton from '../components/BasicButton.vue'
+</script>
+
+<style scoped>
+  h1{
+    display:flex;
+  }
+</style>

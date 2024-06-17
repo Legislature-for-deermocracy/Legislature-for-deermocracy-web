@@ -1,10 +1,14 @@
 ---
+title: 冬鹿苑
+description: Legislature for deermocracy
+image: https://imgur.com/3NmYNzG
+featured: true
 layout: home
 
 hero:
   name: '冬鹿苑'
   text: 'Legislature for deermocracy'
-  tagline: 06/21 青鳥行動
+  tagline: 06/19 ~ 6/21 青鳥行動
   actions:
     - theme: brand
       text: 🚇行前準備
@@ -13,42 +17,9 @@ hero:
       text: 🧭現場行動指南
       link: /guide
     - theme: brand
-      text: 沒有要到現場的
-      link: /guide
-    - theme: alt
-      text: 詳細資訊
-      link: /demands
-# features:
-#   - icon: 🚦
-#     title: 123
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#     link: /traffic
-#   - icon: 🚦
-#     title: 456
-#     details: Lorem ipsum dolor sit amet, consectetur adipiscing Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#     link: /traffic
-
-# - icon: 📢
-#   title: 最新消息
-#   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   link: /news
-# - icon: 📃
-#   title: 行動訴求
-#   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   link: /demands
-# - icon: 🚦
-#   title: 交通資訊
-#   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   link: /traffic
-# - icon: 📰
-#   title: 闢謠專區
-#   details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#   link: /debunk
+      text: ℹ️關於青鳥行動
+      link: /action
 ---
-
-<script setup>
-  import FooterInfo from './components/FooterInfo.vue'
-</script>
 
 <!-- ::: danger
 這是範例資訊框4
@@ -106,6 +77,12 @@ hero:
 >
 > 主辦｜台灣公民陣線、台灣經濟民主連合、公投護台灣聯盟
 
+> 資訊來源：台灣經濟民主聯合
+
 :::
 
-<FooterInfo />
+<!-- <style>
+  .VPButton.brand {
+    color: #000 !important;
+  }
+</style> -->

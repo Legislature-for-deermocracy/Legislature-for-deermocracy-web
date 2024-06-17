@@ -14,8 +14,17 @@
   --vp-custom-block-danger-bg: #a13d43;
   --vp-custom-block-details-bg: #38383f;
 
+  --vp-c-brand-3: #458f84;
+  --vp-c-brand-4: #ffffff;
+  /* --vp-button-brand-text {
+    color: grey !important;
+  } */
+
   .custom-block {
-    padding-top: 8px;
+    padding-top: 16px;
+  }
+  .info {
+    padding-top: 16px;
   }
   .details {
     padding-top: 16px;
