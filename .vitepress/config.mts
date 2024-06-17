@@ -12,15 +12,26 @@ export default defineConfig({
     logo: '../src/assets/line.svg',
     siteTitle: '冬鹿苑',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: '行前準備', link: '/preparation' },
+      { text: '現場行動指南', link: '/guide' },
+      { text: '關於青鳥行動', link: '/action' },
+      { text: '關於我們', link: '/about' },
     ],
     sidebar: [
       {
-        text: 'Examples',
+        text: '目錄',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          {
+            text: '行前準備',
+            items: [
+              { text: '事前提醒事項', link: '/preparation/#事前提醒事項' },
+              { text: '交通資訊', link: '/preparation/#交通資訊' },
+              { text: '友善店家', link: '/preparation/#友善店家' },
+            ],
+          },
+          { text: '現場行動指南', link: '/guide' },
+          { text: '關於青鳥行動', link: '/action' },
+          { text: '關於我們', link: '/about' },
         ],
       },
     ],
@@ -37,6 +48,12 @@ export default defineConfig({
         link: 'https://discord.gg/VVhYNxfCf2',
       },
     ],
+    footer: {
+      message:
+        '• 2024 立院漫步 • 2024 521民主陣線 •<br>本網站由 立院漫步網站組 營運更新',
+      copyright:
+        'Released under the MIT License. Copyright © 2024-present Deermocracy',
+    },
   },
   markdown: {
     container: {
