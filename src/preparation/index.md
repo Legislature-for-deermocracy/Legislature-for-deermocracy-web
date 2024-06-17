@@ -29,7 +29,7 @@
 
 ## 交通資訊
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IWyd92rRukvThxYPw_49xZjrPAxm0hw&ehbc=2E312F&noprof=1" width="640" height="480" />
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IWyd92rRukvThxYPw_49xZjrPAxm0hw&ehbc=2E312F&noprof=1" width="400" height="300" />
 
 ### ​捷運
 
