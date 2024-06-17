@@ -7,9 +7,55 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: 'src',
   base: '/', // 根據 repo 名稱設定
+  head: [
+    ['meta', { property: 'og:locale', content: 'zh_TW' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: '冬鹿苑' }],
+    [
+      'meta',
+      { property: 'og:description', content: 'Legislature for deermocracy' },
+    ],
+    ['meta', { property: 'og:image', content: '/og-image-rec.png' }],
+    ['meta', { property: 'og:image:alt', content: '冬鹿苑' }],
+    ['meta', { property: 'og:image:type', content: 'image/png' }],
+    ['meta', { property: 'og:image:width', content: '1920' }],
+    ['meta', { property: 'og:image:height', content: '1080' }],
+
+    ['meta', { property: 'og:image', content: '/og-image-squ.png' }],
+    ['meta', { property: 'og:image:alt', content: '冬鹿苑' }],
+    ['meta', { property: 'og:image:type', content: 'image/png' }],
+    ['meta', { property: 'og:image:width', content: '1080' }],
+    ['meta', { property: 'og:image:height', content: '1080' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/og-image-squ.png',
+      },
+    ],
+    // - Google Analytics
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-RGQ2LY7FEL',
+      },
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-XXXXXXXXXX');",
+    ],
+    // - Google Tag Manager
+    [
+      'script',
+      {},
+      "(function(w,d,s,l,i){w[l]=w[l]||[];\nw[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});\nvar f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';\nj.async=true;\nj.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-55NGJN7L');",
+    ],
+  ],
   appearance: 'force-dark',
   themeConfig: {
-    logo: '../src/assets/line.svg',
     siteTitle: '冬鹿苑',
     nav: [
       { text: '行前準備', link: '/preparation' },
@@ -23,11 +69,7 @@ export default defineConfig({
         items: [
           {
             text: '行前準備',
-            items: [
-              { text: '事前提醒事項', link: '/preparation/#事前提醒事項' },
-              { text: '交通資訊', link: '/preparation/#交通資訊' },
-              { text: '友善店家', link: '/preparation/#友善店家' },
-            ],
+            link: '/preparation',
           },
           { text: '現場行動指南', link: '/guide' },
           { text: '關於青鳥行動', link: '/action' },
@@ -50,7 +92,7 @@ export default defineConfig({
     ],
     footer: {
       message:
-        '• 2024 立院漫步 • 2024 521民主陣線 •<br>本網站由 立院漫步網站組 營運更新',
+        '• 2024 立院漫步 • 2024 521捍衛民主陣線 •<br>本網站由 立院漫步網站組 營運更新',
       copyright:
         'Released under the MIT License. Copyright © 2024-present Deermocracy',
     },
