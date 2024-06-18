@@ -25,7 +25,21 @@ export default defineConfig({
     ['meta', { property: 'og:image:alt', content: '冬鹿苑' }],
     ['meta', { property: 'og:image:type', content: 'image/png' }],
     ['meta', { property: 'og:image:width', content: '1080' }],
+
     ['meta', { property: 'og:image:height', content: '1080' }],
+    ['meta', { property: 'og:image:height', content: '1080' }],
+    ['meta', { property: 'og:image:height', content: '1080' }],
+    ['meta', { property: 'og:image:height', content: '1080' }],
+
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:site', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: '冬鹿苑' }],
+    [
+      'meta',
+      { name: 'twitter:description', content: 'Legislature for deermocracy.' },
+    ],
+    ['meta', { name: 'twitter:image', content: '/og-image-squ.png' }],
+
     [
       'link',
       {
