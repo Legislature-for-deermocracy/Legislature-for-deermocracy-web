@@ -31,14 +31,17 @@ export default defineConfig({
     ['meta', { property: 'og:image:height', content: '1080' }],
     ['meta', { property: 'og:image:height', content: '1080' }],
 
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:site', content: 'summary' }],
-    ['meta', { name: 'twitter:title', content: '冬鹿苑' }],
+    ['meta', { property: 'twitter:card', content: 'summary' }],
+    ['meta', { property: 'twitter:site', content: 'summary' }],
+    ['meta', { property: 'twitter:title', content: '冬鹿苑' }],
     [
       'meta',
-      { name: 'twitter:description', content: 'Legislature for deermocracy.' },
+      {
+        property: 'twitter:description',
+        content: 'Legislature for deermocracy.',
+      },
     ],
-    ['meta', { name: 'twitter:image', content: '/og-image-squ.png' }],
+    ['meta', { property: 'twitter:image', content: '/og-image-squ.png' }],
 
     [
       'link',
