@@ -80,20 +80,20 @@ export default defineConfig({
       { text: '關於青鳥行動', link: '/action' },
       { text: '關於我們', link: '/about' },
     ],
-    sidebar: [
-      {
-        text: '目錄',
-        items: [
-          {
-            text: '行前準備',
-            link: '/preparation',
-          },
-          { text: '現場行動指南', link: '/guide' },
-          { text: '關於青鳥行動', link: '/action' },
-          { text: '關於我們', link: '/about' },
-        ],
-      },
-    ],
+    // sidebar: [
+    //   {
+    //     text: '目錄',
+    //     items: [
+    //       {
+    //         text: '行前準備',
+    //         link: '/preparation',
+    //       },
+    //       { text: '現場行動指南', link: '/guide' },
+    //       { text: '關於青鳥行動', link: '/action' },
+    //       { text: '關於我們', link: '/about' },
+    //     ],
+    //   },
+    // ],
 
     socialLinks: [
       {
