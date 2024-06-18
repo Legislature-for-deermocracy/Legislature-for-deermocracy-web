@@ -24,10 +24,10 @@ hero:
       link: /action
 
 features:
-  - icon: 📢
-    title: 現場公告
-    details: 測試內容
-    image: /banner.png
+  # - icon: 📢
+  #   title: 現場公告
+  #   details: 測試內容
+  #   image: /banner.png
   - icon: ℹ️
     title: 活動資訊
     details: 日期｜6/19 ~ 6/21<br>
