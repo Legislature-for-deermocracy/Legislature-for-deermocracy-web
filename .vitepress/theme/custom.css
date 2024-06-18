@@ -8,14 +8,6 @@
     #d0e7b6
   );
 
-  --vp-c-text-1: {
-    color: rgba(255, 255, 245, 0.86);
-  };
-
-  --vp-c-text-2: {
-    color: rgba(235, 235, 245, 1) !important;
-  };
-
   --vp-custom-block-info-bg: #202127;
   --vp-custom-block-tip-bg: #3d6aa1;
   --vp-custom-block-warning-bg: #a17d3d;
@@ -34,6 +26,7 @@
     #be34fe94 50%,
     #47cbff91 50%
   );
+
   --vp-home-hero-image-filter: blur(70px);
 
   .custom-block {
