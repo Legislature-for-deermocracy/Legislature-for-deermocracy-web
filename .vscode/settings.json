@@ -3,6 +3,8 @@
     "addtohomescreen",
     "adipiscing",
     "amet",
+    "appspot",
+    "Bdcc",
     "camelcase",
     "compat",
     "consectetur",
@@ -10,16 +12,23 @@
     "Damngood",
     "deermocracy",
     "elit",
+    "firebaseapp",
+    "Firestore",
     "frontmatter",
     "Homescreen",
+    "iqjt",
     "Linktree",
     "owliehq",
     "Parens",
     "rgba",
+    "signin",
     "tailwindcss",
+    "todos",
     "tseslint",
     "VITE",
-    "vitepress"
+    "vitepress",
+    "vuefire",
+    "Zcfg"
   ],
   "cSpell.enableFiletypes": ["!yaml"]
 }

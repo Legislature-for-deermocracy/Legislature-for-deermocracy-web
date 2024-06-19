@@ -1,5 +1,7 @@
 <script setup>
   import { ref, onBeforeMount, onUnmounted } from 'vue';
+  import { ref as dbRef, get, getDatabase } from 'firebase/database';
+  import { getAuth, signInAnonymously } from 'firebase/auth';
 
   const remark = defineModel('remark', {
     type: String,
@@ -9,6 +11,17 @@
     type: String,
     default: '',
   });
+
+  const db = getDatabase();
+  const sheetData = ref({});
+  const getData = async () => {
+    try {
+      await signInAnonymously(getAuth());
+      sheetData.value = (await get(dbRef(db, 'data'))).val();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const item = ref({
     water: '統計中...',
@@ -27,40 +40,10 @@
     raincoat: '',
   });
 
-  let lastRequestTime = localStorage.getItem('lastRequestTime')
-    ? parseInt(localStorage.getItem('lastRequestTime'))
-    : 0;
-  const sheetData = ref({});
-  const getData = async () => {
-    const now = Date.now();
-    // > 如果 10 秒內有過請求，則不再發送請求
-    if (now - lastRequestTime < 10000) {
-      sheetData.value = JSON.parse(localStorage.getItem('data')) || {};
-      parseData();
-      return;
-    }
-
-    lastRequestTime = now;
-    localStorage.setItem('lastRequestTime', lastRequestTime);
-
-    try {
-      const res = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_SHEET_ID}/values/物資量能(for 網站)?alt=json&key=${import.meta.env.VITE_GOOGLE_API_KEY}`,
-      );
-      sheetData.value = await res.json();
-      // 存入 localStorage
-      localStorage.setItem('data', JSON.stringify(sheetData.value));
-    } catch (err) {
-      console.error(err);
-    } finally {
-      parseData();
-    }
-  };
-
   const parseData = () => {
-    item.value.water = sheetData.value.values[11][1] || '統計中...';
-    item.value.food = sheetData.value.values[11][2] || '統計中...';
-    item.value.raincoat = sheetData.value.values[11][3] || '統計中...';
+    item.value.water = sheetData.value.item.water.value || '統計中...';
+    item.value.food = sheetData.value.item.food.value || '統計中...';
+    item.value.raincoat = sheetData.value.item.raincoat.value || '統計中...';
 
     Object.keys(item.value).forEach((key) => {
       if (item.value[key] === '存貨充足，不需補充') {
@@ -72,23 +55,22 @@
       }
     });
 
-    remark.value = sheetData.value.values[12]?.[1] || '';
-    information.value = sheetData.value.values[13]?.[1] || '';
+    remark.value = sheetData.value.post.announcement || '';
+    information.value = sheetData.value.post.info || '';
   };
 
+  const intervalId = setInterval(() => {
+    // > 每30秒自動執行一次 getData
+    setTimeout(parseData);
+  }, 30000);
   onBeforeMount(async () => {
     await getData();
+    parseData();
+  });
 
-    // > 每分鐘 + 隨機0~59秒，自動執行一次 getData
-    const intervalId = setInterval(() => {
-      const randomDelay = Math.floor(Math.random() * 60) * 1000;
-      setTimeout(getData, randomDelay);
-    }, 60000);
-
-    // 確保在組件卸載時清除 interval
-    onUnmounted(() => {
-      clearInterval(intervalId);
-    });
+  // 卸載時清除 interval
+  onUnmounted(() => {
+    clearInterval(intervalId);
   });
 </script>
 
