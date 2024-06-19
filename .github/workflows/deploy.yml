@@ -21,6 +21,11 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# 允許 Repo Secrets
+env:
+  VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
+  VITE_SHEET_ID: ${{ secrets.VITE_SHEET_ID }}
+
 # 定義工作
 jobs:
   # 建置任務
