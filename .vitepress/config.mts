@@ -8,6 +8,14 @@ export default defineConfig({
   srcDir: 'src',
   base: '/', // 根據 repo 名稱設定
   head: [
+    [
+      'meta',
+      {
+        name: 'google-site-verification',
+        content: 'y7bqaZ8UTBYw5TCM0lFKndxqqdc56EtbvDIA4P1kSKM',
+      },
+    ],
+
     ['meta', { property: 'og:locale', content: 'zh_TW' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: '冬鹿苑' }],
