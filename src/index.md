@@ -27,10 +27,10 @@ hero:
       link: /action
 
 features:
-  # - icon: 📢
-  #   title: 現場公告
-  #   details: 測試內容
-  #   image: /banner.png
+  - icon: 📢
+    title: 現場公告
+    details: 現場開始下雨，等等預估有暴雨，請大家注意，盡量勿使用雨傘以免誤傷人。
+    image: /banner.png
   - icon: ℹ️
     title: 活動資訊
     details: 日期｜6/19 ~ 6/21<br>
@@ -51,9 +51,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- ::: danger
-這是範例資訊框4
-:::
-::: warning
+現場開始下雨 等等預估有暴雨
+請大家注意 盡量勿使用雨傘以免誤傷人
+::: -->
+
+<!-- ::: warning
 這是範例資訊框3
 ::: -->
 
