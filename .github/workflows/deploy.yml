@@ -21,11 +21,6 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-# 允許 Repo Secrets
-env:
-  VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
-  VITE_SHEET_ID: ${{ secrets.VITE_SHEET_ID }}
-
 # 定義工作
 jobs:
   # 建置任務
@@ -57,6 +52,11 @@ jobs:
       # 使用 VitePress 構建
       - name: Build with VitePress
         run: pnpm run docs:build # 或 npm docs:build / yarn docs:build / bun run docs:build
+        # 允許 Repo Secrets
+        env:
+          VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
+          VITE_SHEET_ID: ${{ secrets.VITE_SHEET_ID }}
+
       # 上傳建置結果
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
