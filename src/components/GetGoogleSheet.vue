@@ -1,6 +1,15 @@
 <script setup>
   import { ref, onBeforeMount } from 'vue';
 
+  const remark = defineModel('remark', {
+    type: String,
+    default: '',
+  });
+  const information = defineModel('information', {
+    type: String,
+    default: '',
+  });
+
   const item = ref({
     water: '統計中...',
     food: '統計中...',
@@ -17,28 +26,7 @@
     food: '',
     raincoat: '',
   });
-  const remark = ref([
-    {
-      name: '濟南站',
-      value: '',
-    },
-    {
-      name: '濟南水區',
-      value: '',
-    },
-    {
-      name: '濟南總站',
-      value: '',
-    },
-    {
-      name: '青島站',
-      value: '',
-    },
-    {
-      name: '接收站',
-      value: '',
-    },
-  ]);
+
   const getData = async () => {
     const res = await fetch(
       `https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_SHEET_ID}/values/物資量能(for 網站)?alt=json&key=${import.meta.env.VITE_GOOGLE_API_KEY}`,
@@ -58,11 +46,8 @@
       }
     });
 
-    remark.value[0] = data.values[1][12];
-    remark.value[1] = data.values[2][12];
-    remark.value[2] = data.values[3][12];
-    remark.value[3] = data.values[4][12];
-    remark.value[4] = data.values[5][12];
+    remark.value = data.values[12]?.[1] || '';
+    information.value = data.values[13]?.[1] || '';
   };
 
   onBeforeMount(async () => {
