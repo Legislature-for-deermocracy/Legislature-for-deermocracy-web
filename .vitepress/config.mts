@@ -47,8 +47,7 @@ export default defineConfig({
       'link',
       {
         rel: 'icon',
-        type: 'image/x-icon',
-        href: '/og-image-squ.png',
+        href: '/favicon.ico',
       },
     ],
     // - Google Analytics
