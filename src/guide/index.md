@@ -9,9 +9,11 @@ next: false
 [[toc]]
 :::
 
-## 集會地圖
+<h2>🔗快速連結</h2>
 
-![集會地圖](/map.png)
+<BasicButton label="🗺️集會地圖" to="/guide/#集會地圖" color="bg-teal-600" />
+<BasicButton label="🕙時程表" to="/guide/#時程表" color="bg-teal-600" />
+<BasicButton label="🖼️圖卡資訊" to="/guide/#圖卡資訊" color="bg-teal-600" />
 
 ## **現場須知**
 
@@ -59,6 +61,22 @@ next: false
   - 若有持續大量的出血，可以用手直接加壓流血的部位，以減緩出血速度。
   - 如果您有相關的醫療訓練，請第一時間提供救助，直到醫療團隊到達。
   - 如果你沒有相關的訓練或知識，請用各種方式保護傷者(自己)。
+
+## 集會地圖
+
+![集會地圖](/map.png)
+
+## 時程表
+
+![時程表](/schedule.jpg)
+
+![時程表2](/schedule2.jpg)
+
+## 圖卡資訊
+
+![圖卡1](/info-1.jpg)
+
+![圖卡2](/info-2.jpg)
 
 <script setup>
   import BasicButton from '../components/BasicButton.vue'

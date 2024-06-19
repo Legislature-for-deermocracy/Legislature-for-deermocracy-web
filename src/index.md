@@ -20,6 +20,9 @@ hero:
       text: 🧭現場行動指南
       link: /guide
     - theme: brand
+      text: 🛒現場物資狀況
+      link: /supplies
+    - theme: brand
       text: ℹ️關於青鳥行動
       link: /action
 

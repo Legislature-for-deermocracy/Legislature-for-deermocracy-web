@@ -77,6 +77,8 @@ export default defineConfig({
     nav: [
       { text: '行前準備', link: '/preparation' },
       { text: '現場行動指南', link: '/guide' },
+      { text: '時程表', link: '/guide/#集會時程表' },
+      { text: '集會地圖', link: '/guide/#集會地圖' },
       { text: '關於青鳥行動', link: '/action' },
       { text: '關於我們', link: '/about' },
     ],
