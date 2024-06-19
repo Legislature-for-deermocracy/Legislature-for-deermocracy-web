@@ -29,7 +29,10 @@ hero:
 features:
   - icon: 📢
     title: 現場公告
-    details: 現場雨勢暫緩，但仍請大家保管好雨衣，慎防稍晚下雨。
+    details: 目前有多位朋友反應<br>現場出現特定人士正在隨機騷擾民眾<br>請各位注意安全 提高警惕
+
+切勿與他人起爭執口角  
+如有任何問題與情況請通知警察與維安人員
     image: /banner.png
   - icon: ℹ️
     title: 活動資訊
