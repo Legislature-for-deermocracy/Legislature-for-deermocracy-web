@@ -57,7 +57,6 @@
         itemColor.value[key] = colorList.red;
       }
     });
-    console.log(itemColor.value);
 
     remark.value[0] = data.values[1][12];
     remark.value[1] = data.values[2][12];
