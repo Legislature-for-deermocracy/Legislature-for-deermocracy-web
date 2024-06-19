@@ -12,12 +12,12 @@ defineProps({
   <VPFeatures class="cfeatures" :class="{ noPadding }" v-bind="$attrs" />
 </template>
 
-<style>
+<style scoped>
 /* style reset */
 .cfeatures.noPadding {
-  padding: inherit;
+  padding: initial;
 }
-.cfeatures h2 {
+.vp-doc .cfeatures :deep(h2) {
   margin: initial;
   border-top: initial;
   padding-top: initial;
@@ -25,7 +25,7 @@ defineProps({
   position: initial;
   outline: initial;
 }
-.cfeatures p {
-  margin: inherit;
+.vp-doc .cfeatures :deep(p) {
+  margin: initial;
 }
 </style>
