@@ -29,7 +29,7 @@ hero:
 features:
   - icon: 📢
     title: 現場公告
-    details: 現場開始下雨，等等預估有暴雨，請大家注意，盡量勿使用雨傘以免誤傷人。
+    details: 現場雨勢暫緩，但仍請大家保管好雨衣，以防稍晚持續有降雨。
     image: /banner.png
   - icon: ℹ️
     title: 活動資訊
