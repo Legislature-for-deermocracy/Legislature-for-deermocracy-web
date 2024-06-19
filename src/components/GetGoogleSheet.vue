@@ -59,13 +59,14 @@
     information.value = sheetData.value?.post?.info ?? '';
   };
 
-  const intervalId = setInterval(() => {
-    // > 每30秒自動執行一次 getData
-    setTimeout(parseData);
-  }, 30000);
+  let intervalId;
   onBeforeMount(async () => {
     await getData();
     parseData();
+    intervalId = setInterval(() => {
+      // > 每30秒自動執行一次 getData
+      setTimeout(parseData);
+    }, 30000);
   });
 
   // 卸載時清除 interval
