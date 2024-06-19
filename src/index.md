@@ -50,9 +50,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- ::: danger
-這是範例資訊框4
-:::
+::: danger
+天氣現況 0619 14:23
+現場開始下雨 等等預估有午後雷陣雨
+請大家注意 盡量勿使用雨傘以免誤傷人:::
+<!-- 
 ::: warning
 這是範例資訊框3
 ::: -->
