@@ -1,4 +1,5 @@
 ---
+title: 現場物資庫存
 prev: false
 next: false
 ---
