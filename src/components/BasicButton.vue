@@ -31,9 +31,4 @@
   >
     {{ label }}
   </button>
-  <image
-    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png"
-  />
-
-  <image src="https://imgur.com/3NmYNzG" />
 </template>

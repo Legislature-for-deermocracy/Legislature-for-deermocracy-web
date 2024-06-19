@@ -11,9 +11,9 @@ next: false
 
 <h2>🔗快速連結</h2>
 
-<BasicButton label="🗺️集會地圖" to="/guide/#集會地圖" color="bg-teal-600" />
-<BasicButton label="🕙時程表" to="/guide/#時程表" color="bg-teal-600" />
-<BasicButton label="🖼️圖卡資訊" to="/guide/#圖卡資訊" color="bg-teal-600" />
+<BasicButton class="mt-2" label="🗺️集會地圖" to="/guide/#集會地圖" color="bg-teal-600" />
+<BasicButton class="mt-2" label="🕙時程表" to="/guide/#時程表" color="bg-teal-600" />
+<BasicButton class="mt-2" label="🖼️圖卡資訊" to="/guide/#圖卡資訊" color="bg-teal-600" />
 
 ## **現場須知**
 
