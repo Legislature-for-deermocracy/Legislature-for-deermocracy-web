@@ -1,5 +1,5 @@
 <script setup>
-  import { ref, onBeforeMount } from 'vue';
+  import { ref, onBeforeMount, onUnmounted } from 'vue';
 
   const remark = defineModel('remark', {
     type: String,
@@ -35,12 +35,11 @@
     const now = Date.now();
     // > 如果 10 秒內有過請求，則不再發送請求
     if (now - lastRequestTime < 10000) {
-      console.log('10 秒內有過請求，不再發送請求');
       sheetData.value = JSON.parse(localStorage.getItem('data')) || {};
       parseData();
       return;
     }
-    console.log('發送請求');
+
     lastRequestTime = now;
     localStorage.setItem('lastRequestTime', lastRequestTime);
 
@@ -59,7 +58,6 @@
   };
 
   const parseData = () => {
-    console.log(sheetData.value);
     item.value.water = sheetData.value.values[11][1] || '統計中...';
     item.value.food = sheetData.value.values[11][2] || '統計中...';
     item.value.raincoat = sheetData.value.values[11][3] || '統計中...';
@@ -80,6 +78,17 @@
 
   onBeforeMount(async () => {
     await getData();
+
+    // > 每分鐘 + 隨機0~59秒，自動執行一次 getData
+    const intervalId = setInterval(() => {
+      const randomDelay = Math.floor(Math.random() * 60) * 1000;
+      setTimeout(getData, randomDelay);
+    }, 60000);
+
+    // 確保在組件卸載時清除 interval
+    onUnmounted(() => {
+      clearInterval(intervalId);
+    });
   });
 </script>
 
