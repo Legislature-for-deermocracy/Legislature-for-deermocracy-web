@@ -8,11 +8,11 @@ next: false
 <GetGoogleSheet v-model:remark="remark" v-model:information="information" />
 
 :::warning 📢公告
-**{{ remark }}**
+**<div v-html="remark" />**
 :::
 
 :::tip ℹ️捐贈物資資訊
-**{{ information }}**
+**<div v-html="information" />**
 :::
 
 <script setup>

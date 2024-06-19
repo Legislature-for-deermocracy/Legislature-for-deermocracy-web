@@ -27,14 +27,42 @@
     raincoat: '',
   });
 
+  let lastRequestTime = localStorage.getItem('lastRequestTime')
+    ? parseInt(localStorage.getItem('lastRequestTime'))
+    : 0;
+  const sheetData = ref({});
   const getData = async () => {
-    const res = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_SHEET_ID}/values/物資量能(for 網站)?alt=json&key=${import.meta.env.VITE_GOOGLE_API_KEY}`,
-    );
-    const data = await res.json();
-    item.value.water = data.values[11][1];
-    item.value.food = data.values[11][2];
-    item.value.raincoat = data.values[11][3];
+    const now = Date.now();
+    // > 如果 10 秒內有過請求，則不再發送請求
+    if (now - lastRequestTime < 10000) {
+      console.log('10 秒內有過請求，不再發送請求');
+      sheetData.value = JSON.parse(localStorage.getItem('data')) || {};
+      parseData();
+      return;
+    }
+    console.log('發送請求');
+    lastRequestTime = now;
+    localStorage.setItem('lastRequestTime', lastRequestTime);
+
+    try {
+      const res = await fetch(
+        `https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_SHEET_ID}/values/物資量能(for 網站)?alt=json&key=${import.meta.env.VITE_GOOGLE_API_KEY}`,
+      );
+      sheetData.value = await res.json();
+      // 存入 localStorage
+      localStorage.setItem('data', JSON.stringify(sheetData.value));
+    } catch (err) {
+      console.error(err);
+    } finally {
+      parseData();
+    }
+  };
+
+  const parseData = () => {
+    console.log(sheetData.value);
+    item.value.water = sheetData.value.values[11][1] || '統計中...';
+    item.value.food = sheetData.value.values[11][2] || '統計中...';
+    item.value.raincoat = sheetData.value.values[11][3] || '統計中...';
 
     Object.keys(item.value).forEach((key) => {
       if (item.value[key] === '存貨充足，不需補充') {
@@ -46,8 +74,8 @@
       }
     });
 
-    remark.value = data.values[12]?.[1] || '';
-    information.value = data.values[13]?.[1] || '';
+    remark.value = sheetData.value.values[12]?.[1] || '';
+    information.value = sheetData.value.values[13]?.[1] || '';
   };
 
   onBeforeMount(async () => {

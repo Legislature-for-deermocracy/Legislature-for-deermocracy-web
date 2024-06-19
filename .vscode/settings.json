@@ -18,6 +18,7 @@
     "rgba",
     "tailwindcss",
     "tseslint",
+    "VITE",
     "vitepress"
   ],
   "cSpell.enableFiletypes": ["!yaml"]
