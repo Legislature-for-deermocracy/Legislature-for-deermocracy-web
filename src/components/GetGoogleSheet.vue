@@ -41,9 +41,9 @@
   });
 
   const parseData = () => {
-    item.value.water = sheetData.value.item.water.value || '統計中...';
-    item.value.food = sheetData.value.item.food.value || '統計中...';
-    item.value.raincoat = sheetData.value.item.raincoat.value || '統計中...';
+    item.value.water = sheetData.value?.item?.water.value ?? '統計中...';
+    item.value.food = sheetData.value?.item?.food.value ?? '統計中...';
+    item.value.raincoat = sheetData.value?.item?.raincoat.value ?? '統計中...';
 
     Object.keys(item.value).forEach((key) => {
       if (item.value[key] === '存貨充足，不需補充') {
@@ -55,8 +55,8 @@
       }
     });
 
-    remark.value = sheetData.value.post.announcement || '';
-    information.value = sheetData.value.post.info || '';
+    remark.value = sheetData.value?.post?.announcement ?? '';
+    information.value = sheetData.value?.post?.info ?? '';
   };
 
   const intervalId = setInterval(() => {
