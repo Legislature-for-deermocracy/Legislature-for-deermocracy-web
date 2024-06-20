@@ -70,7 +70,7 @@ next: false
 
 ![時程表](/schedule.jpg)
 
-![時程表3](/schedule3.jpg)
+![時程表4](/schedule4.jpg)
 
 ## 圖卡資訊
 
