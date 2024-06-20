@@ -1,7 +1,7 @@
 <script setup>
   import { ref, onBeforeMount, onUnmounted } from 'vue';
-  import { ref as dbRef, get, getDatabase } from 'firebase/database';
-  import { getAuth, signInAnonymously } from 'firebase/auth';
+
+  import { getSheetData } from '../composables/get-sheet-data.js';
 
   const remark = defineModel('remark', {
     type: String,
@@ -12,16 +12,7 @@
     default: '',
   });
 
-  const db = getDatabase();
   const sheetData = ref({});
-  const getData = async () => {
-    try {
-      await signInAnonymously(getAuth());
-      sheetData.value = (await get(dbRef(db, 'data'))).val();
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const item = ref({
     water: '統計中...',
@@ -61,7 +52,7 @@
 
   let intervalId;
   onBeforeMount(async () => {
-    await getData();
+    sheetData.value = await getSheetData();
     parseData();
     intervalId = setInterval(() => {
       // > 每30秒自動執行一次 getData

@@ -29,6 +29,10 @@
 
   --vp-home-hero-image-filter: blur(70px);
 
+  .VPFeatures {
+    padding: 0px;
+  }
+
   .custom-block {
     padding-top: 8px;
   }
