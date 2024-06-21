@@ -78,6 +78,8 @@ next: false
 
 ![圖卡2](/info-2.jpg)
 
+![圖卡3](/info-3.jpg)
+
 <script setup>
   import BasicButton from '../components/BasicButton.vue'
 </script>
