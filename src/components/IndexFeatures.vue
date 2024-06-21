@@ -28,6 +28,11 @@
     const { features } = await useParseFeatures(sheetData);
 
     data.value = features.value;
+    data.value.push({
+      icon: '🖼️',
+      title: '🔗圖卡資訊',
+      link: 'guide/#圖卡資訊',
+    });
   };
 
   onMounted(() => {

@@ -64,7 +64,7 @@ next: false
 
 ## 集會地圖
 
-![集會地圖](/map.png)
+![集會地圖](/map-new.jpg)
 
 ## 時程表
 
