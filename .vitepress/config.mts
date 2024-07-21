@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import decap, { createFolderCollection, createField } from 'vite-plugin-decap-cms';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -133,4 +134,24 @@ export default defineConfig({
       detailsLabel: '目錄',
     },
   },
+  vite: {
+    plugins: [
+      decap({
+        config: {
+          backend: {
+            name: 'git-gateway',
+          },
+          collections: [
+            createFolderCollection({
+              name: 'blog',
+              label: 'Blog',
+              fields: [
+                createField('markdown', { name: 'body'})
+              ]
+            })
+          ]
+        }
+      })
+    ]
+  }
 });
