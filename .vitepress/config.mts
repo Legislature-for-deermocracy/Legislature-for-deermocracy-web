@@ -140,6 +140,7 @@ export default defineConfig({
         config: {
           backend: {
             name: 'git-gateway',
+            branch: 'main',
           },
           mediaFolder: 'src/public',
           collections: [
