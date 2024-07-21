@@ -141,6 +141,7 @@ export default defineConfig({
           backend: {
             name: 'git-gateway',
           },
+          mediaFolder: 'src/public',
           collections: [
             createFolderCollection({
               name: 'blog',

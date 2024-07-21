@@ -1,9 +1,0 @@
-local_backend: false
-backend:
-  name: git-gateway
-collections:
-  - name: blog
-    label: Blog
-    fields:
-      - name: body
-        widget: markdown
